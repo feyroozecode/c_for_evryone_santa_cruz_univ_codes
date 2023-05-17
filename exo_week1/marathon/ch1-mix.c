@@ -17,9 +17,18 @@ int main(void){
     printf("Enter yeards in second time : ");
     scanf("%d", &yeards);
 
-    kilometers = 1.609 * (miles + (yeards / 1760.0));
+    // convert miles and yeards to kilometers
+    kilometers = convertMilesAndYeardTOkilometers(miles, yeards);
 
     printf("A marathon is %lf kilometers. \n", kilometers);
 
     return 0;
+}
+
+int convertMilesAndYeardTOkilometers(int miles, int yeards){
+    // documnetation 
+    // 1 mile = 1.609 kilometers
+    // 1 yeard = 1760.0 meters
+    
+    return 1.609 * (miles + (yeards / 1760.0)); 
 }
